@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: feignhystrixdemo-provider
+  profiles:
+    active:
+      - prd
+
+server:
+  port: 8081
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*"
