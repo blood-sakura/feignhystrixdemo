@@ -2,7 +2,7 @@ FROM java:8
 
 MAINTAINER Lin
 
-ADD feignhystrixdemo-consumer-0.0.1-SNAPSHOT.jar app.jar
+ADD feignhystrixdemo-consumer.jar app.jar
 
 EXPOSE 8080
 
