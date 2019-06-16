@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: feignhystrixdemo-provider
+spec:
+  selector:
+    matchLabels:
+      run: feignhystrixdemo-provider
+  replicas: 2
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  template:
+    metadata:
+      labels:
+        run: feignhystrixdemo-provider
+    spec:
+      containers:
+      - name: feignhystrixdemo-provider
+        image: apacpoc.azurecr.io/feignhystrixdemo-provider:0.0.1-SNAPSHOT
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
