@@ -143,19 +143,35 @@
 						</configuration>
 					</execution>
 					<execution>
-						<id>gen-scripts</id>
+						<id>gen-dockerfile</id>
 						<!-- here the phase you need -->
 						<phase>validate</phase>
 						<goals>
 							<goal>copy-resources</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>${basedir}/src/main/scripts</outputDirectory>
+							<outputDirectory>${basedir}/src/main/docker</outputDirectory>
 							<resources>
 								<resource>
 									<directory>src/main/templates/docker</directory>
 									<filtering>true</filtering>
 								</resource>
+							</resources>
+							<delimiters>
+								<delimiter>${*}</delimiter>
+							</delimiters>
+						</configuration>
+					</execution>
+					<execution>
+						<id>gen-k8s</id>
+						<!-- here the phase you need -->
+						<phase>validate</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${basedir}/src/main/k8s</outputDirectory>
+							<resources>
 								<resource>
 									<directory>src/main/templates/k8s</directory>
 									<filtering>true</filtering>
