@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ${artifactName}
+spec:
+  selector:
+    matchLabels:
+      run: ${artifactName}
+  replicas: 2
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  template:
+    metadata:
+      labels:
+        run: ${artifactName}
+    spec:
+      containers:
+      - name: ${artifactName}
+        image: apacpoc.azurecr.io/${artifactName}:${dockerImgVer}
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080

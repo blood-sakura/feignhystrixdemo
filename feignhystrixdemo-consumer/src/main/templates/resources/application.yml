@@ -1,9 +1,9 @@
 spring:
   application:
-    name: feignhystrixdemo-consumer
+    name: ${artifactName}
   profiles:
     active:
-      - dev
+      - ${activeProfile}
 
 management:
   endpoints:
