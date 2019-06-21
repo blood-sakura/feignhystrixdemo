@@ -1,9 +1,9 @@
 spring:
   application:
-    name: feignhystrixdemo-provider
+    name: ${artifactName}
   profiles:
     active:
-      - prd
+      - ${activeProfile}
 
 management:
   endpoints:
@@ -11,3 +11,5 @@ management:
       exposure:
         include:
         - "*"
+
+feign.hystrix.enabled: true

@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: feignhystrixdemo-provider
+  name: ${artifactName}
 spec:
   selector:
     matchLabels:
-      run: feignhystrixdemo-provider
+      run: ${artifactName}
   replicas: 2
   strategy:
     rollingUpdate:
@@ -14,11 +14,11 @@ spec:
   template:
     metadata:
       labels:
-        run: feignhystrixdemo-provider
+        run: ${artifactName}
     spec:
       containers:
-      - name: feignhystrixdemo-provider
-        image: apacpoc.azurecr.io/feignhystrixdemo-provider:0.0.1-SNAPSHOT
+      - name: ${artifactName}
+        image: apacpoc.azurecr.io/${artifactName}:${dockerImgVer}
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
