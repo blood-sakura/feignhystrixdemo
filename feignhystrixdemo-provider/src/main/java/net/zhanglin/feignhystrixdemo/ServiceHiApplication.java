@@ -26,7 +26,7 @@ public class ServiceHiApplication {
     @RequestMapping("/hi")
     public String home(@RequestParam(value = "name", defaultValue = "forezp") String name) {
     	logger.info("Executing feignhystrixdemo-provider");
-        return "hi " + name + " ,i am from IP:"+ System.getenv("MY_POD_IP") +" Port:" + port;
+        return "hi " + name + " ,[Executed in "+System.getenv("ACTIVE_MVN_PROFILE_KEY")+"]: i am from IP:"+ System.getenv("MY_POD_IP") +" Port:" + port;
     }
     
 }
