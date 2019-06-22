@@ -6,7 +6,7 @@
 
 	<groupId>net.zhanglin</groupId>
 	<artifactId>feignhystrixdemo-provider</artifactId>
-	<version>0.0.1</version>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
 	<parent>
@@ -77,24 +77,6 @@
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
-		</profile>
-		<profile>
-			<id>sit</id>
-			<properties>
-				<activeProfile>sit</activeProfile>
-			</properties>
-		</profile>
-		<profile>
-			<id>qc</id>
-			<properties>
-				<activeProfile>qc</activeProfile>
-			</properties>
-		</profile>
-		<profile>
-			<id>stag</id>
-			<properties>
-				<activeProfile>stag</activeProfile>
-			</properties>
 		</profile>
 		<profile>
 			<id>prd</id>
