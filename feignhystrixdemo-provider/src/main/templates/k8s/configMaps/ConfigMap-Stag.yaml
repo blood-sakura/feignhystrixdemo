@@ -5,3 +5,4 @@ metadata:
   namespace: stag
 data:
   ACTIVE_MVN_PROFILE: prd
+  ENVIRONMENT_NAME: Stag

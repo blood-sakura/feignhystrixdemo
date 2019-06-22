@@ -5,3 +5,4 @@ metadata:
   namespace: default
 data:
   ACTIVE_MVN_PROFILE: prd
+  ENVIRONMENT_NAME: Dev

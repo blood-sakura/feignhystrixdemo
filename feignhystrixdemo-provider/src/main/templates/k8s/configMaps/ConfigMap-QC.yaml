@@ -5,3 +5,4 @@ metadata:
   namespace: qc
 data:
   ACTIVE_MVN_PROFILE: prd
+  ENVIRONMENT_NAME: QC

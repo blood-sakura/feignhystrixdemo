@@ -5,3 +5,4 @@ metadata:
   namespace: uat
 data:
   ACTIVE_MVN_PROFILE: prd
+  ENVIRONMENT_NAME: UAT
