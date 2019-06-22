@@ -87,21 +87,9 @@
 			</activation>
 		</profile>
 		<profile>
-			<id>sit</id>
+			<id>test</id>
 			<properties>
 				<activeProfile>sit</activeProfile>
-			</properties>
-		</profile>
-		<profile>
-			<id>qc</id>
-			<properties>
-				<activeProfile>qc</activeProfile>
-			</properties>
-		</profile>
-		<profile>
-			<id>stag</id>
-			<properties>
-				<activeProfile>stag</activeProfile>
 			</properties>
 		</profile>
 		<profile>
