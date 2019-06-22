@@ -20,7 +20,8 @@ spec:
       - name: ${artifactName}
         image: apacpoc.azurecr.io/${artifactName}:${dockerImgVer}
         imagePullPolicy: Always
-        command: [ "java", "-jar", "/app.jar --spring.profiles.active=$(ACTIVE_MVN_PROFILE_KEY)" ]
+        command: [ "java" ]
+        args: ["-jar", "/app.jar --spring.profiles.active=$(ACTIVE_MVN_PROFILE_KEY)"]
         ports:
           - containerPort: 8080
         env:
