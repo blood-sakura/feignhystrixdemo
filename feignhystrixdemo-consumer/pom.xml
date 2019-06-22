@@ -89,7 +89,7 @@
 		<profile>
 			<id>test</id>
 			<properties>
-				<activeProfile>sit</activeProfile>
+				<activeProfile>test</activeProfile>
 			</properties>
 		</profile>
 		<profile>

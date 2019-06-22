@@ -20,10 +20,17 @@ spec:
       - name: ${artifactName}
         image: apacpoc.azurecr.io/${artifactName}:${dockerImgVer}
         imagePullPolicy: Always
-        ports:
-        - containerPort: 8080
-        env:
+        command: [ "java", "-jar", "/app.jar --spring.profiles.active=$(ACTIVE_MVN_PROFILE_KEY)" ]
+      env:
+        - name: ACTIVE_MVN_PROFILE_KEY
+          valueFrom:
+            configMapKeyRef:
+              name: ${artifactName}-config
+              key: ACTIVE_MVN_PROFILE
         - name: MY_POD_IP
           valueFrom:
             fieldRef:
               fieldPath: status.podIP
+      ports:
+        - containerPort: 8080
+       
