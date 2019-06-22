@@ -4,4 +4,4 @@ metadata:
   name: ${artifactName}-config
   namespace: default
 data:
-  ACTIVE_MVN_PROFILE: test
+  ACTIVE_MVN_PROFILE: prd

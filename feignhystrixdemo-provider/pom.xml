@@ -79,12 +79,6 @@
 			</activation>
 		</profile>
 		<profile>
-			<id>test</id>
-			<properties>
-				<activeProfile>test</activeProfile>
-			</properties>
-		</profile>
-		<profile>
 			<id>prd</id>
 			<properties>
 				<activeProfile>prd</activeProfile>
