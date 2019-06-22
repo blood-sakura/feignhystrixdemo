@@ -30,6 +30,11 @@ spec:
               configMapKeyRef:
                 name: ${artifactName}-config
                 key: ACTIVE_MVN_PROFILE
+          - name: ENVIRONMENT_NAME_KEY
+            valueFrom:
+              configMapKeyRef:
+                name: ${artifactName}-config
+                key: ENVIRONMENT_NAME
           - name: MY_POD_IP
             valueFrom:
               fieldRef:

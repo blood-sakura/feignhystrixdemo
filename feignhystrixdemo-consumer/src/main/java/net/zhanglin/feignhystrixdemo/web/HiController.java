@@ -20,6 +20,6 @@ public class HiController {
     @GetMapping(value = "/hi")
     public String sayHi(@RequestParam String name) {
     	logger.info("Calling service - feignhystrixdemo-provider");
-        return schedualServiceHi.sayHiFromClientOne( name ) + "[Triggered in "+System.getenv("ACTIVE_MVN_PROFILE_KEY")+"]";
+        return schedualServiceHi.sayHiFromClientOne( name ) + "[Triggered in "+System.getenv("ENVIRONMENT_NAME_KEY")+"]";
     }
 }
