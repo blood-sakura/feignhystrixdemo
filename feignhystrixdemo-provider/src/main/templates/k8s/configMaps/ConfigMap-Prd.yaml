@@ -5,3 +5,4 @@ metadata:
   namespace: prd
 data:
   ACTIVE_MVN_PROFILE: prd
+  ENVIRONMENT_NAME: Prd
